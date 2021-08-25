@@ -12,6 +12,7 @@ services:
 
     command: 'python3 /app.py && tail -F anything'
 
+    
   desktopserver2:
 
     build: ./desktopserver 
