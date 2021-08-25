@@ -1,0 +1,11 @@
+version: '3.9'
+
+
+services:
+
+  login:
+    
+    build: ./login.local
+
+    ports:
+      - 4001:4001
