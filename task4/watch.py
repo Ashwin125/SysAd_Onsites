@@ -59,6 +59,7 @@ def moniter(files):
                     print('restarting container', _file, "got updated")
 
                     system('docker-compose down')
+                    system('docker-compose build')
                     system('docker-compose up -d')
 
                     prev_data[_file] = currentdata
@@ -75,3 +76,4 @@ if __name__ == '__main__':
     print("reading", ROOT)
     system('docker-compose up -d')
     moniter(allfiles)
+    system('docker-compose down')
